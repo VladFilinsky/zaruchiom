@@ -9692,7 +9692,7 @@ img.mfp-img {
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 button:focus {
