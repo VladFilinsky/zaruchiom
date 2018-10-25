@@ -193,32 +193,6 @@ h1, h2, h3, h4, h5, h6
 	&-copyright
 		background-color: #2b2c33
 		padding: 1.5%
-.waves
-	position: absolute
-	top: -30vh
-	left: 0
-	width: 55vw
-	&-item		
-		position: absolute
-		img
-			background-repeat: no-repeat
-			background-size: cover
-			z-index: 10
-		&:nth-child(1)
-			z-index: 1
-			top: -50px
-			left: 0
-		&:nth-child(2)
-			z-index: 5
-			top: -450px
-			left: -950px
-			transform: rotate(40deg)
-		&:nth-child(3)
-			z-index: 3
-			top: -250px
-			left: -700px
-			transform: rotate(10deg)
-
 .section-overlay, .park-overlay
 	&::before
 		position: absolute
@@ -271,6 +245,14 @@ h1, h2, h3, h4, h5, h6
 				font-size: 22px
 		a
 			display: inline-block
+.header-waves
+	display: block
+	position: absolute
+	width: 48%
+	height: 45%
+	background: url(../img/header-waves.png) 0 0 no-repeat
+	background-size: 80%
+	z-index: 2
 
 .headerContent
 	width: 100%
