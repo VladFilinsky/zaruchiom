@@ -10001,15 +10001,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headerTop-contacts, .footer-contacts {
+  text-align: left;
   font-family: "OpenSans", sans-serif;
   font-size: 14px;
   font-weight: 200;
-  padding-top: 5px;
+  padding: 15px 0 0 37px;
 }
 
 .headerTop-contacts p:nth-child(1), .footer-contacts p:nth-child(1) {
   white-space: nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .headerTop-contacts .fa, .footer-contacts .fa {
@@ -10020,11 +10021,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .headerTop-tel, .footer-tel {
   text-align: center;
+  padding: 10px 0 0 60px;
 }
 
 .headerTop-tel p, .footer-tel p {
   font-size: 19px;
   white-space: nowrap;
+  margin-bottom: 5px;
 }
 
 .headerTop-tel p span, .footer-tel p span {
@@ -10542,6 +10545,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   text-align: center;
+  -webkit-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .excursion-text a:nth-child(2) {
@@ -10550,6 +10556,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .excursion-text a:nth-child(3) {
   background-color: #cd191e;
+}
+
+.excursion-text a:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .excursion-text a .fa {
@@ -10637,6 +10649,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-logo p {
   font-size: 6px;
+}
+
+.footer-contacts {
+  padding: 0 0 0 37px;
+}
+
+.footer-tel {
+  padding: 0 0 0 60px;
+  margin-top: -3px;
 }
 
 .footer-right-link, .copyright-link {
