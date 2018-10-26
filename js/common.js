@@ -12,6 +12,7 @@ $(".owl-carousel").owlCarousel({
     animateOut: 'fadeOut',
     dots: false,
     navText: false,
+    autoHeight:true,
     responsive:{
         0:{
             items:1
