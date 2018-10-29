@@ -63,4 +63,11 @@ $('.popup-msg').magnificPopup({
     removalDelay: 500,
     mainClass: 'mfp-fade',
 });
+$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.realty-wrapper').find('div.tabs__content').fadeOut(300).removeClass('active').eq($(this).index()).delay(200).fadeIn(300).addClass('active');
+
+  });
+$('.tabs__content').css('display', 'block');
 });

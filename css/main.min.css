@@ -10328,6 +10328,9 @@ h1, h2, h3, h4, h5, h6 {
 .realty-wrapper {
   font-family: "OpenSans", sans-serif;
   margin: 3% 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .realtytop-help {
@@ -10362,13 +10365,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-.realtytop-nav li {
-  list-style: none;
-  display: inline-block;
-  floa: left;
+.realtytop-nav .active {
+  background-color: #8FD33F;
+  color: #fff;
 }
 
-.realtytop-nav li a {
+.realtytop-nav li {
+  list-style: none;
+  floa: left;
   display: inline-block;
   text-decoration: none;
   min-weight: 275px;
@@ -10381,9 +10385,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
-.realtytop-nav li a:hover {
+.realtytop-nav li:hover {
   color: #fff;
   background-color: #8FD33F;
+  cursor: pointer;
 }
 
 .realtyroom-nav {
@@ -10394,13 +10399,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.realtyroom-nav li {
-  margin-bottom: 20px;
-  display: block;
+.realtyroom-nav .active {
+  background-color: #1EB6C1;
+  color: #fff;
 }
 
-.realtyroom-nav li a {
-  text-decoration: none;
+.realtyroom-nav li {
+  margin-bottom: 20px;
   display: inline-block;
   color: #858585;
   padding: 15px 0 15px 30px;
@@ -10410,9 +10415,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.realtyroom-nav li a:hover {
+.realtyroom-nav li:hover {
   color: #fff;
   background-color: #1EB6C1;
+  cursor: pointer;
 }
 
 .realtyroom-nav li .h5 {
@@ -10447,6 +10453,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 20px;
 }
 
+.realtyinfo-box .tabs__content {
+  display: none;
+}
+
+.realtyinfo-box .tabs__content:first-of-type {
+  display: block;
+}
+
 .realtyinfo-box p {
   font-size: 13px;
   line-height: 1.9;
@@ -10458,6 +10472,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
   text-align: center;
   position: relative;
+  min-height: 290px;
+}
+
+.realtyinfo-slider .owl-carousel .owl-item {
+  height: 250px;
 }
 
 .realtyinfo-slider .owl-next, .realtyinfo-slider .owl-prev {
@@ -10557,6 +10576,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .realtyinfo-price_season .fa {
   margin-right: 10px;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content:first-of-type {
+  display: block;
 }
 
 .callback {

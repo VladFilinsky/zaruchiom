@@ -445,6 +445,7 @@ h1, h2, h3, h4, h5, h6
 .realty-wrapper
 	font-family: $opensans
 	margin: 3% 0
+	transition: all 0.5s ease-in-out
 .realtytop
 	&-help
 		text-transform: uppercase
@@ -468,23 +469,25 @@ h1, h2, h3, h4, h5, h6
 		margin: 0
 		padding: 0
 		margin-bottom: 20px
+		.active
+			background-color: $accent
+			color: #fff
 		li
 			list-style: none
-			display: inline-block
 			floa: left
-			a
-				display: inline-block
-				text-decoration: none
-				min-weight: 275px
-				color: #858585
-				font-weight: bold
-				border: 1px solid $accent
-				border-radius: 3px
-				padding: 15px 30px
-				margin-right: 10px
-				&:hover
-					color: #fff
-					background-color: $accent
+			display: inline-block
+			text-decoration: none
+			min-weight: 275px
+			color: #858585
+			font-weight: bold
+			border: 1px solid $accent
+			border-radius: 3px
+			padding: 15px 30px
+			margin-right: 10px
+			&:hover
+				color: #fff
+				background-color: $accent
+				cursor: pointer
 .realtyroom
 	&-nav
 		margin: 0
@@ -492,20 +495,21 @@ h1, h2, h3, h4, h5, h6
 		list-style: none
 		display: inline-block
 		width: 100%
+		.active
+			background-color: $btn
+			color: #fff
 		li
 			margin-bottom: 20px
-			display: block
-			a
-				text-decoration: none
-				display: inline-block
-				color: #858585
-				padding: 15px 0 15px 30px
-				border: 1px solid $btn
-				border-radius: 3px
-				width: 100%
-				&:hover
-					color: #fff
-					background-color: $btn
+			display: inline-block
+			color: #858585
+			padding: 15px 0 15px 30px
+			border: 1px solid $btn
+			border-radius: 3px
+			width: 100%
+			&:hover
+				color: #fff
+				background-color: $btn
+				cursor: pointer
 			.h5
 				margin: 0
 				text-transform: none
@@ -527,6 +531,10 @@ h1, h2, h3, h4, h5, h6
 	padding: 5% 5%
 	&-box
 		padding-right: 20px
+		.tabs__content 
+  		display: none
+		.tabs__content:first-of-type
+  		display: block
 		p
 			font-size: 13px
 			line-height: 1.9
@@ -536,6 +544,9 @@ h1, h2, h3, h4, h5, h6
 		padding: 20px 0
 		text-align: center
 		position: relative
+		min-height: 290px
+		.owl-carousel .owl-item 
+    	height: 250px
 		.owl-next, .owl-prev
 			position: absolute
 			width: 40px
@@ -597,7 +608,12 @@ h1, h2, h3, h4, h5, h6
 			color: $accent
 			font-weight: bold
 			.fa
-				margin-right: 10px	
+				margin-right: 10px
+.tabs__content 
+  display: none
+.tabs__content:first-of-type
+  display: block
+
 
 
 	
