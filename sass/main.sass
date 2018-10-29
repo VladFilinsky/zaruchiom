@@ -180,6 +180,7 @@ h1, h2, h3, h4, h5, h6
 		.h2
 			font-size: 48px
 			font-weight: 200
+			white-space: nowrap
 	&-excursion
 		position: relative
 		padding: 5% 0
@@ -251,7 +252,7 @@ h1, h2, h3, h4, h5, h6
 	display: block
 	position: absolute
 	width: 48%
-	height: 45%
+	height: 650px
 	background: url(../img/header-waves.png) 0 0 no-repeat
 	background-size: 80%
 	z-index: 2
@@ -301,10 +302,10 @@ h1, h2, h3, h4, h5, h6
 	&-wave
 		position: absolute
 		width: 100%
-		height: 30%
+		height: 225px
 		background: url(../img/condition/top-waves.png) center no-repeat
 		background-size: cover
-		top: -28%
+		top: -214px
 		left: 0
 	&-content
 		margin-top: 5%
@@ -442,11 +443,169 @@ h1, h2, h3, h4, h5, h6
 					color: $accent
 /* Блок realty*/
 .realty-wrapper
+	font-family: $opensans
 	margin: 3% 0
-.realty-form
-	background-color: #333
+.realtytop
+	&-help
+		text-transform: uppercase
+		font-weight: 400
+		margin: 0
+		padding: 0
+		display: block
+		vertical-align: middle
+		margin-bottom: 20px
+		li
+			list-style: none
+			&:before
+				content: ''
+				display: inline-block
+				height: 22px
+				width: 22px
+				background: url(../img/realty/information-symbol.svg) center no-repeat
+				margin-right: 10px
+				transform: translateY(20%)
+	&-nav
+		margin: 0
+		padding: 0
+		margin-bottom: 20px
+		li
+			list-style: none
+			display: inline-block
+			floa: left
+			a
+				display: inline-block
+				text-decoration: none
+				min-weight: 275px
+				color: #858585
+				font-weight: bold
+				border: 1px solid $accent
+				border-radius: 3px
+				padding: 15px 30px
+				margin-right: 10px
+				&:hover
+					color: #fff
+					background-color: $accent
+.realtyroom
+	&-nav
+		margin: 0
+		padding: 0
+		list-style: none
+		display: inline-block
+		width: 100%
+		li
+			margin-bottom: 20px
+			display: block
+			a
+				text-decoration: none
+				display: inline-block
+				color: #858585
+				padding: 15px 0 15px 30px
+				border: 1px solid $btn
+				border-radius: 3px
+				width: 100%
+				&:hover
+					color: #fff
+					background-color: $btn
+			.h5
+				margin: 0
+				text-transform: none
+				font-size: 18px
+			p
+				margin: 0
+				font-weight: 200
+				span
+					display: inline-block
+					margin-left: 20px
+
+.realtyinfo
+	font-family: $opensans
 	width: 100%
-	min-height: 900px
+	height: 100%
+	background-color: #fafafa
+	border-radius: 3px
+	box-shadow: 0px 5px 9px 1px rgba(0, 0, 1, 0.1)
+	padding: 5% 5%
+	&-box
+		padding-right: 20px
+		p
+			font-size: 13px
+			line-height: 1.9
+			margin-top: 40px
+	&-slider
+		background-color: #fff
+		padding: 20px 0
+		text-align: center
+		position: relative
+		.owl-next, .owl-prev
+			position: absolute
+			width: 40px
+			height: 40px
+			top: 50%
+			transform: translateY(-50%)		
+			.fa
+				color: #929292
+				font-size: 40px
+		.owl-next
+			right: 3%
+		.owl-prev
+			left: 3%
+		img
+			height: 250px
+			max-width: 250px
+			background-size: cover
+			background-position: center
+			display: block
+			margin: 0 auto
+	&-price
+		padding-left: 20px
+		p
+			position: relative
+			color: #949494
+			font-weight: 200
+			&:first-of-type
+				font-size: 13px
+			span
+				position: absolute
+				right: 15px
+				display: inline-block
+				color: #333
+			&:last-child
+				font-size: 14px
+				margin-top: 5px
+				color: #333
+		.h3
+			font-weight: 400
+			font-size: 21px
+		&_btn
+			padding: 10px 60px
+			margin: 15px 0
+		&_cost
+			margin-bottom: 5px
+		&_oldprice
+			text-decoration: line-through
+			font-weight: bold !important
+			margin-bottom: 0
+		&_newprice
+			font-weight: bold !important
+			font-size: 24px
+			color: #333 !important
+			margin-bottom: 5px
+		&_season
+			list-style: none
+			margin: 0
+			padding: 0
+			color: $accent
+			font-weight: bold
+			.fa
+				margin-right: 10px	
+
+
+	
+	
+	
+
+
+			
 
 .callback
 	position: relative
@@ -483,7 +642,7 @@ h1, h2, h3, h4, h5, h6
 		&_left
 			width: 220px
 			height: 220px
-			top: -3%
+			top: 0
 			left: 12%
 		&_right
 			width: 160px
@@ -534,6 +693,7 @@ h1, h2, h3, h4, h5, h6
 			font-weight: bold
 			font-size: 36px
 			text-transform: none
+			white-space: nowrap
 		p
 			margin: 10px 0 40px
 			font-weight: 200
@@ -553,7 +713,7 @@ h1, h2, h3, h4, h5, h6
 		background-position: center
 		background-repeat: no-repeate
 		background-size: cover
-.owl-next, .owl-prev
+.park .owl-next, .owl-prev
 	position: absolute
 	display: block
 	width: 85px
@@ -561,11 +721,13 @@ h1, h2, h3, h4, h5, h6
 	top: 50%
 	outline: none
 	transform: translateY(-50%)
-	right: 10%
-.owl-next
+.park .owl-next
 	background: url(../img/park/next.png) no-repeat center !important
-.owl-prev
+	background-size: cover !important
+	right: 10%
+.park .owl-prev
 	background: url(../img/park/prev.png) no-repeat center !important
+	background-size: cover !important
 	left: 10%
 .owl-next.disabled, .owl-prev.disabled  
   display: none !important 
@@ -693,14 +855,37 @@ h1, h2, h3, h4, h5, h6
 		&:hover
 			color: rgba(#fff, .55)
 			border-bottom: 1px solid rgba(#fff, .55)
-	img
-		width: 35px
-		float: right
-	span
-		display: inline-block
+	&-sells
 		text-align: right
-		margin-left: 30%
-		line-height: 1.4
+	ul
+		list-style-type: none
+		display: inline-block
+		width: 180px
+		height: 45px
+		margin: 0
+		padding: 0
+		li
+			position: relative
+			width: 100%
+			height: 100%
+			span
+				display: block
+				text-align: right
+				line-height: 1.4
+				position: absolute
+				top: 0
+				right: 45px	
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 35px
+				height: 35px
+				background: url(../img/sells.png) center no-repeat
+				background-size: 100%
+				top: 0
+				right: 0		
+
 
 	/* Модальные окна*/
 .white-popup 
@@ -775,6 +960,12 @@ h1, h2, h3, h4, h5, h6
 
 
 
+@media screen and (max-width: 446px)
+	.form-callback-input
+		margin: 0
+		&:nth-child(1)
+			margin-bottom: 20px
+	
 
 
 @import "media" /* Always at the end*/
