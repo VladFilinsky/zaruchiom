@@ -10371,17 +10371,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .realtytop-nav li {
+  text-align: center;
   list-style: none;
   floa: left;
   display: inline-block;
   text-decoration: none;
-  min-weight: 275px;
+  width: 23%;
   color: #858585;
   font-weight: bold;
   border: 1px solid #8FD33F;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  padding: 15px 30px;
+  line-height: 3.5;
   margin-right: 10px;
 }
 
@@ -10451,14 +10452,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .realtyinfo-box {
   padding-right: 20px;
-}
-
-.realtyinfo-box .tabs__content {
-  display: none;
-}
-
-.realtyinfo-box .tabs__content:first-of-type {
-  display: block;
 }
 
 .realtyinfo-box p {
@@ -10578,11 +10571,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
-.tabs__content {
+/* Прячим блоки в секции коммерческая недвижимоть*/
+.homes-select_room {
   display: none;
 }
 
-.tabs__content:first-of-type {
+.homes-select_room:first-of-type {
+  display: block;
+}
+
+.home7-room {
+  display: none;
+}
+
+.home7-room:first-of-type {
+  display: block;
+}
+
+.tabs__home {
+  display: none;
+}
+
+.tabs__home:first-of-type {
   display: block;
 }
 
@@ -11036,10 +11046,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .msg-pop {
   position: relative;
-  margin: 20px auto;
+  margin: 0 auto;
   color: #333;
   max-width: 420px;
-  padding: 2% 20px 3% 15px;
+  padding: 30px 20px 50px 15px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   background: #f7f7f7 url(../img/excursion/formBg.png) left bottom -30px no-repeat;
@@ -11143,6 +11153,21 @@ h1, h2, h3, h4, h5, h6 {
   .owl-prev {
     left: 2%;
   }
+  .benefit-block-box {
+    background-image: none;
+    padding: 30px;
+    min-height: 250px;
+  }
+  .benefit-block-box .h4 {
+    font-size: 20px;
+    margin: 15px 0 20px 0;
+  }
+  .benefit-block-box p {
+    font-size: 14px;
+  }
+  .benefit-block-box ul li {
+    font-size: 14px;
+  }
 }
 
 /* ≥992px*/
@@ -11163,6 +11188,23 @@ h1, h2, h3, h4, h5, h6 {
   .condition-wave {
     height: 160px;
     top: -152px;
+  }
+  .condition-box {
+    -webkit-background-size: 170% 170%;
+            background-size: 170%;
+  }
+  .condition-box .h4 {
+    font-size: 22px;
+  }
+  .condition-box p {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .condition-box .btn-box {
+    font-size: 14px;
+    padding: 8px 25px;
+    margin-top: 15px;
+    margin-bottom: 35px;
   }
   .excursion-text .h2 {
     font-size: 30px;
@@ -11199,6 +11241,13 @@ h1, h2, h3, h4, h5, h6 {
   .s-benefit {
     padding-top: 20%;
   }
+  .realtytop-nav li, .realtyroom-nav li {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  .realtyroom-nav li {
+    margin-right: 10px;
+  }
 }
 
 /* ≥768px*/
@@ -11217,6 +11266,17 @@ h1, h2, h3, h4, h5, h6 {
   }
   .s-condition .h2 {
     font-size: 30px;
+  }
+  .condition-box {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .ball-3 {
+    top: 50%;
   }
   .excursion-text {
     text-align: center;
@@ -11266,6 +11326,29 @@ h1, h2, h3, h4, h5, h6 {
   .s-callback {
     padding: 7% 0;
   }
+  .realtytop-nav li, .realtyroom-nav li {
+    width: 47%;
+    margin-bottom: 10px;
+  }
+  .realtyinfo {
+    padding: 20px 15px;
+  }
+  .realtyinfo .h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .realtyinfo-price {
+    padding: 0 10px;
+  }
+  .realtyinfo-price_btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .realtyinfo-box {
+    padding: 0;
+  }
 }
 
 /* ≥576px*/
@@ -11285,7 +11368,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .condition-wave {
     height: 68px;
-    top: -65px;
+    top: -64px;
   }
   .question span::before, .question span::after {
     width: 20%;
@@ -11298,6 +11381,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer {
     padding: 7% 0;
+  }
+  .footer-contacts {
+    text-align: center;
   }
   .footer-tel {
     padding: 0;
@@ -11319,15 +11405,18 @@ h1, h2, h3, h4, h5, h6 {
     height: 19px;
     width: 19px;
   }
-  .owl-next, .owl-prev {
+  .park .owl-next, .owl-prev {
     width: 40px;
     height: 40px;
   }
-  .owl-next {
+  .park .owl-next {
     right: 2%;
   }
-  .owl-prev {
+  .park .owl-prev {
     left: 2%;
+  }
+  .form-callback-input {
+    margin-top: 10px;
   }
   .callback-main {
     margin: 0;
@@ -11366,6 +11455,65 @@ h1, h2, h3, h4, h5, h6 {
   }
   .benefit-block-box ul li {
     font-size: 14px;
+  }
+  .msg-pop {
+    max-width: 320px;
+  }
+  .msg-pop p {
+    font-size: 12px;
+  }
+  .s-realty {
+    padding: 30px 0;
+  }
+  .realtytop-nav li, .realtyroom-nav li {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .realtyroom-nav li {
+    margin-bottom: 10px;
+  }
+  .realtyinfo {
+    padding: 0 5px;
+  }
+  .realtyinfo .h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .realtyinfo-price {
+    padding: 0 10px;
+  }
+  .realtyinfo-price_btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .realtyinfo-box {
+    padding: 0;
+  }
+  .realtyinfo-slider .owl-prev {
+    left: -10px;
+  }
+  .realtyinfo-slider .owl-next {
+    right: -10px;
+  }
+  .benefit-block-box {
+    background-image: none;
+    padding: 10px;
+    min-height: 250px;
+  }
+  .benefit-block-box .h4 {
+    font-size: 18px;
+    margin: 15px 0 20px 0;
+    text-align: center;
+  }
+  .benefit-block-box p {
+    font-size: 12px;
+  }
+  .benefit-block-box ul li {
+    font-size: 12px;
   }
 }
 

@@ -473,21 +473,24 @@ h1, h2, h3, h4, h5, h6
 			background-color: $accent
 			color: #fff
 		li
+			text-align: center
 			list-style: none
 			floa: left
 			display: inline-block
 			text-decoration: none
-			min-weight: 275px
+			width: 23%
 			color: #858585
 			font-weight: bold
 			border: 1px solid $accent
 			border-radius: 3px
-			padding: 15px 30px
+			line-height: 3.5
 			margin-right: 10px
 			&:hover
 				color: #fff
 				background-color: $accent
 				cursor: pointer
+			&:last-child
+
 .realtyroom
 	&-nav
 		margin: 0
@@ -531,10 +534,6 @@ h1, h2, h3, h4, h5, h6
 	padding: 5% 5%
 	&-box
 		padding-right: 20px
-		.tabs__content 
-  		display: none
-		.tabs__content:first-of-type
-  		display: block
 		p
 			font-size: 13px
 			line-height: 1.9
@@ -609,10 +608,19 @@ h1, h2, h3, h4, h5, h6
 			font-weight: bold
 			.fa
 				margin-right: 10px
-.tabs__content 
+/* Прячим блоки в секции коммерческая недвижимоть*/
+.homes-select_room
   display: none
-.tabs__content:first-of-type
+.homes-select_room:first-of-type
   display: block
+.home7-room
+  display: none
+.home7-room:first-of-type
+  display: block
+.tabs__home
+  display: none
+.tabs__home:first-of-type
+	display: block
 
 
 
@@ -923,10 +931,10 @@ h1, h2, h3, h4, h5, h6
   		margin-bottom: 5%
 .msg-pop
 	position: relative
-	margin: 20px auto
+	margin: 0 auto
 	color: #333
 	max-width: 420px
-	padding: 2% 20px 3% 15px
+	padding: 30px 20px 50px 15px
 	border-radius: 3px
 	background:$form url(../img/excursion/formBg.png) left bottom -30px no-repeat
 	background-size: 100%

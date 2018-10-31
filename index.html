@@ -133,7 +133,7 @@
 		<div class="condition-content wrapper">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-sm-5 col-9  col-md-4">
+					<div class="col-12 col-md-4">
 						<div class="condition-box condition-box_img__1">
 							<h4 class="h4">Продажа</h4>
 							<div class="hr-blue"></div>
@@ -143,7 +143,7 @@
 							<a href="#" class="button button-green btn-box">узнайте больше</a>
 						</div>
 					</div>
-					<div class="col-sm-5 col-9 col-md-4">
+					<div class="col-12 col-md-4">
 						<div class="condition-box condition-box_img__2">
 							<h4 class="h4">Аренда</h4>
 							<div class="hr-blue"></div>
@@ -153,7 +153,7 @@
 							<a href="#" class="button button-green btn-box">узнайте больше</a>
 						</div>
 					</div>
-					<div class="col-sm-5 col-9 col-md-4">
+					<div class="col-12 col-md-4">
 						<div class="condition-box condition-box_img__3">
 							<h4 class="h4">Рассрочка</h4>
 							<div class="hr-blue"></div>
@@ -245,12 +245,12 @@
 		<div class="realty-wrapper">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 ">
+					<div class="col-12">
 						<div class="realtytop">
 							<ul class="realtytop-help">
 							<li>выберите объект</li>
 							</ul>
-							<ul class="realtytop-nav tabs__caption">
+							<ul class="realtytop-nav homes-select">
 								<li class="active">ЖК "За ручьем" (Дом 7)</li>
 								<li>ЖК "За ручьем" (Дом 6)</li>
 								<li>ЖК "За ручьем" (Дом 5)</li>
@@ -269,9 +269,10 @@
 				</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
-						<ul class="realtyroom-nav">
-							<li>
+					<!-- Дом 7 -->
+					<div class="col-12 col-lg-3 homes-select_room">
+						<ul class="realtyroom-nav home7-select first">
+							<li class="active">
 									<h5 class="h5">Помещение №1</h5>
 									<p>Площадь: <span>160кв.м</span></p>
 								</li>
@@ -293,7 +294,59 @@
 								</li>
 						</ul>
 						</div>
-					<div class="col-9 tabs__content first">
+							<!-- Дом 6 -->
+						<div class="col-md-3 homes-select_room">
+						<ul class="realtyroom-nav">
+							<li class="active">
+									<h5 class="h5">Помещение №1</h5>
+									<p>Площадь: <span>160кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №2</h5>
+									<p>Площадь: <span>110кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №3</h5>
+									<p>Площадь: <span>130кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №4</h5>
+									<p>Площадь: <span>80кв.м</span></p>
+								</li>
+						</ul>
+						</div>
+							<!-- Дом 5 -->
+						<div class="col-md-3 homes-select_room">
+						<ul class="realtyroom-nav">
+							<li class="active">
+									<h5 class="h5">Помещение №1</h5>
+									<p>Площадь: <span>160кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №2</h5>
+									<p>Площадь: <span>110кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №3</h5>
+									<p>Площадь: <span>130кв.м</span></p>
+								</li>
+						</ul>
+						</div>
+							<!-- Другие -->
+						<div class="col-md-3 col-12 homes-select_room">
+						<ul class="realtyroom-nav">
+							<li class="active">
+									<h5 class="h5">Помещение №1</h5>
+									<p>Площадь: <span>160кв.м</span></p>
+								</li>
+							<li>
+									<h5 class="h5">Помещение №2</h5>
+									<p>Площадь: <span>110кв.м</span></p>
+								</li>
+						</ul>
+						</div>
+						<!-- Дом 7 помещение 1 -->
+					<div class="col-lg-9 col-12 home7-room first">
 						<div class="realtyinfo ">
 						<div class="row">
 							<div class="col-md-6">
@@ -310,7 +363,7 @@
 							<div class="col-md-6">
 								<div class="realtyinfo-price">
 									<h3 class="h3"><strong>Запишитесь</strong><br>на просмотр помещения</h3>
-									<button class="button button-green realtyinfo-price_btn">записаться</button>
+									<button class="button button-green realtyinfo-price_btn" href="#form-popup" data-effect="mfp-zoom-in">записаться</button>
 									<p>*Наш менеджер свяжется с вами в течении 30 минут</p>
 									<hr>
 									<p>Общая площадь:<span>160кв.м</span></p>
@@ -331,7 +384,8 @@
 						</div>
 						</div>
 					</div>
-					<div class="col-9 tabs__content">
+					<!-- Дом 7 помещение 2 -->
+					<div class="col-lg-9 col-12 home7-room">
 						<div class="realtyinfo">
 						<div class="row">
 							<div class="col-md-6">
@@ -348,7 +402,7 @@
 							<div class="col-md-6">
 								<div class="realtyinfo-price">
 									<h3 class="h3"><strong>Запишитесь</strong><br>на просмотр помещения</h3>
-									<button class="button button-green realtyinfo-price_btn">записаться</button>
+									<button class="button button-green realtyinfo-price_btn" href="#form-popup" data-effect="mfp-zoom-in">записаться</button>
 									<p>*Наш менеджер свяжется с вами в течении 30 минут</p>
 									<hr>
 									<p>Общая площадь:<span>160кв.м</span></p>
@@ -369,7 +423,8 @@
 						</div>
 						</div>
 					</div>
-					<div class="col-9 tabs__content">
+					<!-- Дом 7 помещение 3 -->
+					<div class="col-lg-9 col-12 home7-room">
 						<div class="realtyinfo">
 						<div class="row">
 							<div class="col-md-6">
@@ -386,7 +441,7 @@
 							<div class="col-md-6">
 								<div class="realtyinfo-price">
 									<h3 class="h3"><strong>Запишитесь</strong><br>на просмотр помещения</h3>
-									<button class="button button-green realtyinfo-price_btn">записаться</button>
+									<button class="button button-green realtyinfo-price_btn" href="#form-popup" data-effect="mfp-zoom-in">записаться</button>
 									<p>*Наш менеджер свяжется с вами в течении 30 минут</p>
 									<hr>
 									<p>Общая площадь:<span>160кв.м</span></p>
@@ -407,7 +462,8 @@
 						</div>
 						</div>
 					</div>
-					<div class="col-9 tabs__content">
+					<!-- Дом 7 помещение 4 -->
+					<div class="col-lg-9 col-12 home7-room">
 						<div class="realtyinfo">
 						<div class="row">
 							<div class="col-md-6">
@@ -424,7 +480,7 @@
 							<div class="col-md-6">
 								<div class="realtyinfo-price">
 									<h3 class="h3"><strong>Запишитесь</strong><br>на просмотр помещения</h3>
-									<button class="button button-green realtyinfo-price_btn">записаться</button>
+									<button class="button button-green realtyinfo-price_btn" href="#form-popup" data-effect="mfp-zoom-in">записаться</button>
 									<p>*Наш менеджер свяжется с вами в течении 30 минут</p>
 									<hr>
 									<p>Общая площадь:<span>160кв.м</span></p>
@@ -464,11 +520,14 @@
 						<div class="callback-main">
 						<h4 class="h4">Остались вопросы?</h4>
 						<p class="italic">Оставьте ваш телефон и наш менеджер обязательно свяжется с вами</p>
-						<form class="form-callback" method="POST" action="#">
-							<input class="form-callback-input" type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
-							<input class="form-callback-input" id="phone" type="tel" name="phone" required="required">
-							<button class="form-callback-button button button-green" type="submint">заказать звонок</button>
-							<p><input class="form-callback-checkbox" type="checkbox" checked>Даю согласие на <a class="form-personal"  href="#personal-link">обработку персональных данных</a></p>
+						<form class="form-callback" id="callback">
+							<input type="hidden" name="project_name" value="За ручьем - коммерция">
+							<input type="hidden" name="admin_email" value="vfilinsky@vladsever.ru">
+							<input type="hidden" name="form_subject" value="Форма заказать звонок">
+							<input class="form-callback-input" type="text" name="Имя" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
+							<input class="form-callback-input" id="phone" type="tel" name="Телефон" required="required">
+							<button class="form-callback-button button button-green">заказать звонок</button>
+							<p><input class="form-callback-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal"  href="#personal-link">обработку персональных данных</a></p>
 						</form>
 						</div>
 					</div><!-- col-sm-8 -->
@@ -490,7 +549,7 @@
   							<div class="hr"></div>
   							<p>«За ручьем» — это 7 комфортабельных многоквартирных домов. Внутри — благоустроенные, уютные холлы, бесшумные лифты и квартиры со свободной планировкой, снаружи — просторная парковка под видеонаблюдением и площадки для семейного отдыха, закрытые от посторонних. <br><br>
 								«За ручьем» — это гармоничный жилой оазис, с одной стороны окруженный удобной транспортной развязкой, с другой — бизнес-центрами и социальной инфраструктурой, с третьей — живописными зелеными зонами</p>
-								<a href="#" class="button park-btn">на сайт</a>
+								<a href="http://www.zaruchiem.ru/" target="_blank" class="button park-btn">на сайт</a>
 								<a href="#" class="button button-green park-btn park-btn_green"><img class="park-btn_icon" src="img/play-button.svg">видео</a>
   						</div>
   					</div>
@@ -506,7 +565,7 @@
   							<div class="hr"></div>
   							<p>«За ручьем» — это 7 комфортабельных многоквартирных домов. Внутри — благоустроенные, уютные холлы, бесшумные лифты и квартиры со свободной планировкой, снаружи — просторная парковка под видеонаблюдением и площадки для семейного отдыха, закрытые от посторонних. <br><br>
 								«За ручьем» — это гармоничный жилой оазис, с одной стороны окруженный </p>
-								<a href="#" class="button park-btn">на сайт</a>
+								<a href="http://www.zaruchiem.ru/" target="_blank" class="button park-btn" >на сайт</a>
 								<a href="#" class="button button-green park-btn park-btn_green"><img class="park-btn_icon" src="img/play-button.svg">видео</a>
   						</div>
   					</div>
@@ -521,7 +580,7 @@
   							<h3 class="h3">Подробнее о проекте</h3>
   							<div class="hr"></div>
   							<p>«За ручьем» — это 7 комфортабельных многоквартирных домов. Внутри — благоустроенные, уютные холлы, бесшумные лифты и квартиры со свободной планировкой, снаружи — просторная </p>
-								<a href="#" class="button park-btn">на сайт</a>
+								<a href="http://www.zaruchiem.ru/" target="_blank" class="button park-btn">на сайт</a>
 								<a href="#" class="button button-green park-btn park-btn_green"><img class="park-btn_icon" src="img/play-button.svg">видео</a>
   						</div>
   					</div>
@@ -547,12 +606,12 @@
 						</div>
 					</div>
 					<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-						<form action="#" class="form-excursion">
+						<form class="form-excursion" action="" method="POST" id="excursion">
 							<h4 class="h4 text-center"><strong>Запишитесь</strong><br> на экскурсию уже сейчас</h4>
 							<span><div class="hr"></div></span>
 							<input class="form-excursion-input" type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
 							<input class="form-excursion-input" id="phone" type="tel" name="phone" required="required">
-							<p><input class="form-excursion-checkbox" type="checkbox" checked>Даю согласие на <a class="form-personal" href="#">обработку персональных данных</a></p>
+							<p><input class="form-excursion-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal" href="#">обработку персональных данных</a></p>
 							<button class="form-excursion-button button" type="submint">записаться</button>
 							<span class="form-excursion_text text-center">Наш менеджер свяжется с вами<br>в течении 15 минут</span>
 						</form>
@@ -582,7 +641,7 @@
 							<a class="footer-right-link" href="#">Проектная декларация</a>
 						</div>
 					</div>
-					<div class="col-8 col-sm-4 col-md-3">
+					<div class="col-10 col-sm-4 col-md-3">
 						<div class="footer-contacts">
 							<p><i class="fa fa-map-marker"></i> г. Сургут, ул. Университетская, 19 </p>
 							<p><i class="fa fa-clock-o"></i>Пн.-Пт.: 8:00 - 20:00<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сб.:10:00 - 18:00</p>
@@ -618,13 +677,16 @@
 	</section>
 <div class="hidden">
 	<div id="form-popup" class="white-popup mfp-hide">
-		<form class="form-excursion white-popup-form">
+		<form class="form-excursion white-popup-form" id="popup-excursion">
 							<h4 class="h4 text-center"><strong>Заказать звонок</strong></h4>
 							<span><div class="hr"></div></span>
+							<input type="hidden" name="project_name" value="За ручьем - коммерция">
+							<input type="hidden" name="admin_email" value="vfilinsky@vladsever.ru">
+							<input type="hidden" name="form_subject" value="Записаться на экскурсию">
 							<input class="form-excursion-input" type="text" id="name" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
 							<input class="form-excursion-input" id="phone" type="tel" name="phone" required="required">
-							<p><input class="form-excursion-checkbox" type="checkbox" checked>Даю согласие на <a class="form-personal" href="#">обработку персональных данных</a></p>
-							<button class="form-excursion-button button" type="submint">заказать звонок</button>
+							<p><input class="form-excursion-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal" href="#">обработку персональных данных</a></p>
+							<button class="form-excursion-button button">заказать звонок</button>
 						</form>
 	</div>
 	<div id="popup-msg" class="msg-pop mfp-hide">
