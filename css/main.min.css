@@ -11034,6 +11034,7 @@ h1, h2, h3, h4, h5, h6 {
 .white-popup-form .hr {
   height: 6px;
   width: 35px;
+  margin: 10px 0;
 }
 
 .white-popup-form input:nth-child(3) {
@@ -11168,6 +11169,9 @@ h1, h2, h3, h4, h5, h6 {
   .benefit-block-box ul li {
     font-size: 14px;
   }
+  .s-benefit::before {
+    height: 14%;
+  }
 }
 
 /* ≥992px*/
@@ -11240,6 +11244,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .s-benefit {
     padding-top: 20%;
+  }
+  .s-benefit:before {
+    height: 6%;
   }
   .realtytop-nav li, .realtyroom-nav li {
     width: 48%;
@@ -11442,6 +11449,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .s-benefit .h2 {
     font-size: 24px;
+  }
+  .s-benefit:before {
+    height: 4%;
   }
   .benefit-block-box__item1, .benefit-block-box__item2, .benefit-block-box__item3, .benefit-block-box__item4 {
     background-image: none;
