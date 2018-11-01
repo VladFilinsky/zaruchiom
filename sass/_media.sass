@@ -119,6 +119,8 @@
 	.s-header
 		padding-bottom: 30%
 	.headerTop
+		&-logo
+			margin: auto
 		&-tel
 			padding: 0
 	.header-waves
@@ -256,22 +258,33 @@
 			height: 5%
 			bottom: -4.5%
 	.s-benefit
+		padding: 22% 0 30% 0
 		.h2
 			font-size: 24px
 		&:before
 			height: 4%
-	.benefit-block-box
-		&__item1, &__item2, &__item3, &__item4
+	.benefit-block
+		margin-top: 20px
+		&-box
 			background-image: none
-			padding: 30px
-	.benefit-block-box
-		.h4
-			font-size: 20px
-		p
-			font-size: 14px
-		ul
-			li
-				font-size: 14px
+			padding: 20px 15px
+			min-height: 250px
+			.h4
+				font-size: 18px
+				margin: 15px 0 20px 0
+				text-align: center
+			p
+				font-size: 12px
+				text-align: center
+			ul
+				li
+					font-size: 12px
+			img
+				width: 60px
+				left: 50%
+				transform: translateX(-50%)
+				margin-bottom: 10px
+				float: none
 	.msg-pop
 		max-width: 320px
 		p
@@ -303,20 +316,8 @@
 			left: -10px
 		&-slider .owl-next
 			right: -10px
-	.benefit-block-box
-		background-image: none
-		padding: 10px 
-		min-height: 250px
 
-		.h4
-			font-size: 18px
-			margin: 15px 0 20px 0
-			text-align: center
-		p
-			font-size: 12px
-		ul
-			li
-				font-size: 12px
+		
 
 
 

@@ -69,15 +69,35 @@ $('ul.homes-select').on('click', 'li:not(.active)', function() {
       .addClass('active').siblings().removeClass('active')
       .closest('div.realty-wrapper').find('div.homes-select_room').fadeOut(300).removeClass('active').eq($(this).index()).delay(200).fadeIn(300).addClass('active');
   });
-// Выбор помещения Дом7
+// Выбор помещения Дом 7
 $('ul.home7-select').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('div.realty-wrapper').find('div.home7-room').fadeOut(200).removeClass('active').eq($(this).index()).delay(100).fadeIn(200).addClass('active');
   });
+  // Выбор помещения Дом 6
+$('ul.home6-select').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.realty-wrapper').find('div.home6-room').fadeOut(200).removeClass('active').eq($(this).index()).delay(100).fadeIn(200).addClass('active');
+  });
+  // Выбор помещения Дом 5
+$('ul.home5-select').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.realty-wrapper').find('div.home5-room').fadeOut(200).removeClass('active').eq($(this).index()).delay(100).fadeIn(200).addClass('active');
+  });// Выбор помещения Другое
+$('ul.home-other-select').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.realty-wrapper').find('div.home-other-room').fadeOut(200).removeClass('active').eq($(this).index()).delay(100).fadeIn(200).addClass('active');
+  });
 
 $('.home7-room.first').css('display', 'block');
-$('.tabs__room.first').css('display', 'block');
+
+$('.home6-room.first').css('display', 'block');
+
+$('.home5-room.first').css('display', 'block');
 
 $('.realtyinfo-price_btn').on('click', function(event) {
   event.preventDefault();
