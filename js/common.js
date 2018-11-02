@@ -95,10 +95,6 @@ $('ul.home-other-select').on('click', 'li:not(.active)', function() {
 
 $('.home7-room.first').css('display', 'block');
 
-$('.home6-room.first').css('display', 'block');
-
-$('.home5-room.first').css('display', 'block');
-
 $('.realtyinfo-price_btn').on('click', function(event) {
   event.preventDefault();
   $('.white-popup-form > .h4').html('записаться');

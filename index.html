@@ -248,6 +248,12 @@
 							<ul class="realtytop-help">
 							<li>выберите объект</li>
 							</ul>
+							<select class="object" name="Объект">
+								<option>ЖК "За ручьем" (Дом 7)</option>
+								<option>ЖК "За ручьем" (Дом 6)</option>
+								<option>ЖК "За ручьем" (Дом 5)</option>
+								<option>Другие объекты</option>
+							</select>
 							<ul class="realtytop-nav homes-select">
 								<li class="active" date-list="home_7">ЖК "За ручьем" (Дом 7)</li>
 								<li date-list="home_6">ЖК "За ручьем" (Дом 6)</li>
@@ -291,6 +297,24 @@
 									<p>Площадь: <span>60кв.м</span></p>
 								</li>
 						</ul>
+							<select class="room select-home-7" name="Объект">
+								<option>
+									<h5 class="h5">Помещение №1</h5>	
+									<p>Площадь: <span>160кв.м</span></p>
+								</option>
+								<option>
+									<h5 class="h5">Помещение №2</h5>
+									<p>Площадь: <span>110кв.м</span></p>
+								</option>
+								<option>
+									<h5 class="h5">Помещение №3</h5>
+									<p>Площадь: <span>130кв.м</span>
+								</option>
+								<option>
+									<h5 class="h5">Помещение №4</h5>
+									<p>Площадь: <span>80кв.м</span></p>
+								</option>
+							</select>
 						</div>
 							<!-- Дом 6 -->
 						<div class="col-12 col-lg-3 homes-select_room">
@@ -539,7 +563,7 @@
 						</div>
 					</div>
 					<!-- Дом 6 помещение 1 -->
-					<div class="col-lg-9 col-12 home6-room">
+					<div class="col-lg-9 col-12 home6-room first">
 						<div class="realtyinfo">
 						<div class="row">
 							<div class="col-md-6">
@@ -713,14 +737,11 @@
 						<div class="callback-main">
 						<h4 class="h4">Остались вопросы?</h4>
 						<p class="italic">Оставьте ваш телефон и наш менеджер обязательно свяжется с вами</p>
-						<form class="form-callback" id="callback">
-							<input type="hidden" name="project_name" value="За ручьем - коммерция">
-							<input type="hidden" name="admin_email" value="vfilinsky@vladsever.ru">
-							<input type="hidden" name="form_subject" value="Форма заказать звонок">
-							<input class="form-callback-input" type="text" name="Имя" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
-							<input class="form-callback-input" id="phone" type="tel" name="Телефон" required="required">
-							<button class="form-callback-button button button-green">заказать звонок</button>
-							<p><input class="form-callback-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal"  href="#personal-link">обработку персональных данных</a></p>
+						<form method="POST" action="mail.php" class="form-callback" id="callback">
+							<input class="form-callback-input" type="text" name="user_name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
+							<input class="form-callback-input" id="phone" type="tel" name="user_phone" required="required">
+							<button class="form-callback-button button button-green" type="submint">заказать звонок</button>
+							<p><input class="form-callback-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal"  href="upload/privacy.pdf" target="_blank">обработку персональных данных</a></p>
 						</form>
 						</div>
 					</div><!-- col-sm-8 -->
@@ -799,11 +820,11 @@
 						</div>
 					</div>
 					<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-						<form class="form-excursion" action="" method="POST" id="excursion">
+						<form class="form-excursion" method="POST" action="mail.php" id="excursion">
 							<h4 class="h4 text-center"><strong>Запишитесь</strong><br> на экскурсию уже сейчас</h4>
 							<span><div class="hr"></div></span>
-							<input class="form-excursion-input" type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
-							<input class="form-excursion-input" id="phone" type="tel" name="phone" required="required">
+							<input class="form-excursion-input" type="text" name="user_name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{2,}" required="required" title="Введите Имя не менее ДВУХ букв">
+							<input class="form-excursion-input" id="phone" type="tel" name="user_phone" required="required">
 							<p><input class="form-excursion-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal" href="#">обработку персональных данных</a></p>
 							<button class="form-excursion-button button" type="submint">записаться</button>
 							<span class="form-excursion_text text-center">Наш менеджер свяжется с вами<br>в течении 15 минут</span>
