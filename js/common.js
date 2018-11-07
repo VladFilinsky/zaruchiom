@@ -1,14 +1,8 @@
 $(function() {
-
+// добавляем иконку в начало элементам li
 $('.benefit-block-box_list > li').prepend('<i class="fa fa-dot-circle-o"></i>');
 
- 
-
-$("* #phone").mask("+7(000)000-00-00", {
-    placeholder: "+7(___)___-__-__",
-    clearIfNotMatch: true
-  });
-
+// Слайдер секции park
 $(".park").owlCarousel({
     nav:true,
     animateOut: 'fadeOut',
@@ -27,6 +21,7 @@ $(".park").owlCarousel({
         }
     }
 });
+// Слайдер секции 
 $(".realtyinfo-slider").owlCarousel({
     dots: false,
     navText : ['<i class="fa fa-angle-left">','<i class="fa fa-angle-right">'],
@@ -46,7 +41,7 @@ $(".realtyinfo-slider").owlCarousel({
         }
     }
 });
-// Модальное окно popup
+// Модальное окно popup,с формой
 $('.popup-with-form').on('click', function(event) {
   event.preventDefault();
   $('.white-popup-form > .h4').html('заказать звонок');
@@ -58,11 +53,13 @@ $('.popup-with-form').magnificPopup({
     removalDelay: 500,
     mainClass: 'mfp-fade',
 });
-$('.popup-msg').magnificPopup({
-   type: 'inline',
-    removalDelay: 500,
-    mainClass: 'mfp-fade',
-});
+//  Окно "спасибо"
+// $('.popup-msg').magnificPopup({
+//    type: 'inline',
+//     removalDelay: 500,
+//     mainClass: 'mfp-fade',
+// });
+
 // Выбор дома
 $('ul.homes-select').on('click', 'li:not(.active)', function() {
     $(this)
@@ -92,14 +89,47 @@ $('ul.home-other-select').on('click', 'li:not(.active)', function() {
       .addClass('active').siblings().removeClass('active')
       .closest('div.realty-wrapper').find('div.home-other-room').fadeOut(200).removeClass('active').eq($(this).index()).delay(100).fadeIn(200).addClass('active');
   });
+// Показать первые карточки в списке помещений
+$('.home7-room.js-first').css('display', 'block'); 
+$('.home6-room.js-first').css('display', 'block');
+$('.home5-room.js-first').css('display', 'block');
+$('.home-other-room.js-first').css('display', 'block');
+$('.homes-select_room.js-first').css('display', 'block'); 
+// Моб.версия 
+// Выбор дома
+     $(".object").change(function(){
+      $(this)
+        .closest('div.realty-wrapper').find('div.homes-select-17').hide();
+        $(".homes-select-" + $(".object option:selected").val()).show();
+    });
+     $(".object").change(function(){
+      $(this)
+        .closest('div.realty-wrapper').find('div.homes-select-16').hide();
+        $(".homes-select-" + $(".object option:selected").val()).show();
+    });
+     $(".object").change(function(){
+      $(this)
+        .closest('div.realty-wrapper').find('div.homes-select-15').hide();
+        $(".homes-select-" + $(".object option:selected").val()).show();
+    });
+     $(".object").change(function(){
+      $(this)
+        .closest('div.realty-wrapper').find('div.homes-select-19').hide();
+        $(".homes-select-" + $(".object option:selected").val()).show();
+    });
 
-$('.home7-room.first').css('display', 'block');
-
+ $(".js-select-room-home7").change(function(){
+      $(this)
+        .closest('div.realty-wrapper').find("div.js-mobile-71").hide();
+        $(".js-mobile-" + $(".js-select-room-home7 option:selected").val()).show();
+    });
+// Смена заголовка и названия кнопки в попап окне
 $('.realtyinfo-price_btn').on('click', function(event) {
   event.preventDefault();
   $('.white-popup-form > .h4').html('записаться');
   $('.white-popup-form > button').html('записаться');
 });
+// фокус на имени при открытии попап окна с формой
 $('.realtyinfo-price_btn').magnificPopup({
    type: 'inline',
    focus: '#name',
@@ -107,5 +137,18 @@ $('.realtyinfo-price_btn').magnificPopup({
     mainClass: 'mfp-fade',
 });
 
-
+// Закрыть попап «спасибо»
+  $('.js-close-thank-you').click(function() { // по клику на крестик
+  $('.js-overlay-thank-you').fadeOut();
+  });
+  $(document).mouseup(function (e) { // по клику вне попапа
+    var popup = $('.popup');
+    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+    $('.js-overlay-thank-you').fadeOut();
+    }
+  });
+// Маска ввода номера телефона (плагин maskedinput)
+$(function($){
+  $('[name="Телефон"]').mask("+7(999) 999-99-99");
+});
 });
