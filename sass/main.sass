@@ -1,10 +1,8 @@
 @import "vars"
 @import "fonts"
 @import "libs"
-
 ::placeholder
 	color: #666
-
 ::selection
 	background-color: $accent
 	color: #fff
@@ -16,13 +14,12 @@ a
 	text-decoration: none
  &:hover
  	text-decoration: none
-
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: $opensans
 	overflow-x: hidden
 	color: $text
 	input, textarea
@@ -32,44 +29,38 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-
-.img-responsive
+section
+	position: relative
+img
 	display: block
 	max-width: 100%
 	height: auto
-	&.img-width
-		width: 100%
-
 .text-center
 	text-align: center
-
 b, strong
 	font-weight: bold
 .dark
 	color: $dark-text
-
-
 /* Базовые стили*/
 .italic
 	font-weight: italic
 .inverse
 	color: $dark-text
 	background-color: #fff
-
-
+h1,h2
+	font-family: $default-font
 h1, h2, h3, h4, h5, h6
-	font-family: $default-font, sans-serif
 	font-weight: bold
 	line-height: 1.35
 	text-transform: uppercase
 .button
 	font-family: $opensans
 	display: inline-block
-	border: none
+	border: 2px solid $btn
 	color: #fff
 	text-decoration: none
 	background-color: $btn
-	padding: 8px 28px
+	padding: 4px 28px
 	font-size: 14px
 	text-transform: uppercase
 	font-weight: 600
@@ -78,32 +69,85 @@ h1, h2, h3, h4, h5, h6
 	white-space: nowrap
 	position: relative
 	outline: none
-	transition: background-color .2s ease
+	transition:  .25s ease
 	cursor: pointer
 	box-shadow: 0px 2px 4.85px 0.15px rgba(0, 0, 1, 0.1)
 	&:focus, &:hover
 		text-decoration: none
 		color: #fff
 	&:hover
-		background-color: lighten($btn, 5%)
+		background-color: #fff
+		color: #333
+		border: 2px solid $btn
+	&:active
+		background-color: lighten($btn, 35%)
 .button-green
-	background-color: $accent
+	background-color: $btn
 	padding: 10px 30px
 	&:hover
-		background-color: lighten($accent, 5%)
+		background-color: #fff
+		border: 2px solid $btn
+		color: #333
+	&:active
+		background-color: lighten($btn, 35%)
+.s-title
+	padding: 90px 0 70px 0
+	position: relative
+	h2
+		text-align: center
+		font-size: 39px
+		font-weight: 200
+	span
+		position: absolute
+		content: ''
+		display: inline-block
+		border: 1px solid $btn
+		border-radius: 50%
+		background-color: $btn
+		width: 22px
+		height: 22px
+		top: 106px
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			border: 1px solid $btn
+			border-radius: 50%
+			background-color: $btn
+			width: 16px
+			height: 16px
+			left: -35px
+			top: 50%
+			transform: translateY(-50%)
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			border: 1px solid $btn
+			border-radius: 50%
+			background-color: $btn
+			width: 30px
+			height: 30px
+			right: -45px
+			top: 50%
+			transform: translateY(-50%)
+	span:first-child
+		left: 55px
+	span:last-child
+		right: 55px
+		transform: rotate(180deg)
 /* Зеленая полоса*/
 .hr, .hr-blue
 		display: inline-block
 		width: 40px
 		height: 8px
-		background-color: $accent
+		background-color: $green
 		border: none
 		margin-left: 5px
 .hr-blue
-	background-color: $btn
+	background-color: $green
 	width: 27px
 	height: 5px
-
 .circle 
 	display: block
 	position: absolute
@@ -112,87 +156,7 @@ h1, h2, h3, h4, h5, h6
 	background-color: $btn
 	background: linear-gradient(144deg, #461393 0%, #3276b0 45%, #c2dff6 100%)
 	box-shadow: 2px 2px 5px rgba(#000, .2)
-
-.s
-	&-header
-		position: relative
-		width: 100%
-		padding-top: 3%
-		padding-bottom: 15%
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
-	&-condition
-		position: relative
-		background-color: #fff
-		&::before
-			content: ''
-			display: block
-			position: absolute
-			width: 100%
-			height: 25%
-			bottom: -24%
-			left: 0
-			background: url(../img/condition/topBg.png) center no-repeat
-			background-size: cover
-			z-index: 100
-		h2
-			color: $accent
-			font-size: 39px
-			span
-				font-weight: 200
-				color: $dark-text
-	&-benefit
-		background-color: #333
-		position: relative
-		padding: 10% 0 15%
-		background: url(../img/benefit/Bg.png) center no-repeat 
-		background-size: cover
-		&::before
-			content: ''
-			display: block
-			position: absolute
-			width: 100%
-			height: 18%
-			background: url(../img/benefit/bottom-waves.png) center no-repeat
-			background-size: cover
-			left: 0
-			bottom: -13px
-		h2
-			font-size: 36px
-			span
-				color: $accent
-	&-realty
-		.h2
-			font-size: 39px
-			font-weight: 200
-			span
-				color: $accent
-				font-weight: bold
-	&-callback
-		padding: 2% 0
-		position: relative
-		font-family: $opensans
-		background: linear-gradient(90deg, #3d4477 0%, #6d9dcb 50%, #454685 100%)
-	&-park
-		background-color: #333
-		position: relative
-		.h2
-			font-size: 48px
-			font-weight: 200
-			white-space: nowrap
-	&-excursion
-		position: relative
-		padding: 5% 0
-		background: url(../img/excursion/bottomBg.png) right bottom -100% no-repeat
-		background-size: 35%
-	&-footer
-		position: relative
-		background-color: $footer
-		padding: 1.5%
-	&-copyright
-		background-color: #2b2c33
-		padding: 1.5%
+/* OVERLAY SECTION */
 .section-overlay, .park-overlay
 	&::before
 		position: absolute
@@ -201,66 +165,83 @@ h1, h2, h3, h4, h5, h6
 		left: 0
 		width: 100%
 		height: 100%
-		background: rgba(#333, .65%)
+		background: linear-gradient(39deg, rgba(#000, .80%) 0%, rgba(#000, .30%) 100%)
 .park-overlay
 	&::before
 		background: linear-gradient(90deg, rgba(#181818, .55%) 0%, rgba(#181818, .25%) 100%)
- /* Шапка*/
+/* HEADER */
+.s-header
+	padding-bottom: 80px
+	background-position: center top
+	background-size: cover
+	background-repeat: no-repeat
 .headerTop, .footer
 	z-index: 100
 	position: relative
 	&-logo
-		max-width: 244px
+		display: flex
+		align-items: flex-end
 		a
+			width: 183px
+			height: 183px
 			display: inline-block
-			width: 100%
-			height: 100%
 			cursor:pointer
-		&_img
-			width: 100%
-			img
-				z-index: 100
+			padding: 30px
+			background-color: $accent
 		p
-			font-size: 8px
+			font-size: 12px
+			text-align: left
+			margin: 0 0 0 20px
 			text-transform: uppercase
-			margin-left: 19%
 	&-contacts
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
 		text-align: left
 		font-family: $opensans
 		font-size: 14px
 		font-weight: 200
-		padding: 15px 0 0 37px
-		p
-			&:nth-child(1)
-				white-space: nowrap
-				margin-bottom: 5px
-
-		.fa
-			font-style: 14px
-			margin-right: 5px
-			color: $fa-icon
+		span
+			display: inline-block
+			width: 100%
+			padding-left: 20px
+			position: relative
+			margin-top: 5px
+			&:before
+				content: ''
+				position: absolute
+				width: 12px
+				height: 12px
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				background-size: 100%
+				background-repeat: no-repeat
+		span:last-child, span:nth-child(2)
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 299.995 299.995' style='enable-background:new 0 0 299.995 299.995;' xml:space='preserve' width='512px' height='512px'%3E%3Cpath d='M149.995,0C67.156,0,0,67.158,0,149.995s67.156,150,149.995,150s150-67.163,150-150S232.834,0,149.995,0z M214.842,178.524H151.25c-0.215,0-0.415-0.052-0.628-0.06c-0.213,0.01-0.412,0.06-0.628,0.06 c-5.729,0-10.374-4.645-10.374-10.374V62.249c0-5.729,4.645-10.374,10.374-10.374s10.374,4.645,10.374,10.374v95.527h54.47 c5.729,0,10.374,4.645,10.374,10.374C225.212,173.879,220.571,178.524,214.842,178.524z' fill='%23FFFFFF'/%3E%3C/svg%3E")
+		span:first-child
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' width='512px' height='512px' viewBox='0 0 97.713 97.713' style='enable-background:new 0 0 97.713 97.713;' xml:space='preserve'%3E%3Cpath d='M48.855,0C29.021,0,12.883,16.138,12.883,35.974c0,5.174,1.059,10.114,3.146,14.684 c8.994,19.681,26.238,40.46,31.31,46.359c0.38,0.441,0.934,0.695,1.517,0.695s1.137-0.254,1.517-0.695 c5.07-5.898,22.314-26.676,31.311-46.359c2.088-4.57,3.146-9.51,3.146-14.684C84.828,16.138,68.69,0,48.855,0z M48.855,54.659 c-10.303,0-18.686-8.383-18.686-18.686c0-10.304,8.383-18.687,18.686-18.687s18.686,8.383,18.686,18.687 C67.542,46.276,59.159,54.659,48.855,54.659z' fill='%23FFFFFF'/%3E%3C/svg%3E")
 	&-tel
-		text-align: center
-		padding: 10px 0 0 60px
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-end
 		p
 			font-size: 19px
 			white-space: nowrap
 			margin-bottom: 5px
 			span
-				color: $accent
 				font-weight: bold
 				font-size: 22px
 		a
 			display: inline-block
-.header-waves
-	display: block
-	position: absolute
-	width: 48%
-	height: 650px
-	background: url(../img/header-waves.png) 0 0 no-repeat
-	background-size: 80%
-	z-index: 2
-
+			max-width: 195px
 .headerContent
 	width: 100%
 	padding: 9% 0  3% 0
@@ -271,156 +252,176 @@ h1, h2, h3, h4, h5, h6
 			line-height: 80px
 			span
 				font-weight: 200
-	p 
-		margin-top: 10px
-		font-size: 18px
-		font-weight: 200
-
+		p 
+			margin-top: 10px
+			font-size: 18px
+			font-weight: 200
 .headerAdvantages
 	width: 100%
 	height: 100%
+	padding-top: 17px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
 	&-item
 		min-height: 50px
-		display: table
-		border-spacing: 10px
-		&_img
-			display: table-cell
-			vertical-align: middle
+		position: relative
+		padding-left: 60px
+		span
+			display: inline-block
+			position: absolute
 			width: 50px
-			height: auto
-			float: left
-		&_text
-			display: table-cell
-			vertical-align: middle
+			height: 50px
+			top: 0
+			left: 0
+			background-repeat: no-repeat
+			background-size: 100%
+			background-origin: center
 		p
+			padding-top: 5px
 			font-weight: 200
 			line-height: 1.2
 			strong
 				text-transform: uppercase
 				font-weight: 600
 				white-space: nowrap
-
-/* Блок Гибкие условия*/
+/* HEADER END */
+/* CONDITION */
 .condition
-	width: 100%
-	&-wave
-		position: absolute
-		width: 100%
-		height: 225px
-		background: url(../img/condition/top-waves.png) center no-repeat
-		background-size: cover
-		top: -214px
-		left: 0
-	&-content
-		margin-top: 5%
+	padding-bottom: 80px
+	div:nth-child(2) .condition-box
+		&:before
+			background: url(../img/condition/1.jpg) center no-repeat
 	&-box
+		display: inline-block
+		color: #333
 		text-align: center
 		width: 100%
-		height: auto
-		color: #fff
-		border-radius: 20px
-		padding-top: 40px
+		height: 100%
+		padding: 40px
 		box-shadow: 0px 7px 14.58px 3.42px rgba(0, 0, 1, 0.13)
 		position: relative
-		z-index: 1000
+		transition: .45s ease
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 70px
+			background-color: #eaeaea
 		h4
 			font-size: 30px
-		p
-			color: #e5e5e5
+		span
+			display: inline-block
+			width: 100%
 			font-size: 14px
+			text-align: left
 			margin-top: 20px
-		&_img	
-			&__1
-				background: #4a556f url(../img/condition/box-1.png) center no-repeat 
-				background-size: 110%
-			&__2
-				background: #4a556f url(../img/condition/box-2.png) no-repeat center
-				background-size: 130%
-			&__3
-				background: #4a556f url(../img/condition/box-3.png) no-repeat center
-				background-size: 130%
-.btn-box
-	margin-top: 20px
-	margin-bottom: 50px
+			position: relative
+			padding-left: 30px
+			&:before
+				content: ''
+				position: absolute
+				width: 16px
+				height: 100%
+				top: 0
+				left: 0
+				background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 31.49 31.49' style='enable-background:new 0 0 31.49 31.49;' xml:space='preserve'%3E%3Cpath fill='%23a0a0a0' d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z'/%3E%3C/svg%3E")
+				background-size: 100%
+				background-repeat: no-repeat
+				background-position: center
+		button
+			margin: 30px 0 8px 0
+			transition: .45s ease
+.condition-box:hover
+	background-color: #eaeaea
+	cursor: pointer
+	color: #333
+	&:before
+		opacity: 0
+	button
+		background-color: #fff
+		color: #333
 /* Блок question*/
 .question
-	margin: 40px 0 20px
+	margin: 40px 0 30px
 	text-align: center
 	max-height: 40px
 	span
-	 display: inline
-	 img
-	 	display: inline-block
-	 	height: 40px
-	 	width: 40px
-	 	margin: 0 15px
-		&::before, &::after
-		 content: ''
-		 display: inline-block
-		 width: 40%
-		 height: 1px
-		 background-color: #e8e8e8
+		display: inline-block
+		height: 40px
+		width: 40px
+		margin: -20px 15px
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 39.05 39.1'%3E%3Cg fill='%236a8c75'%3E%3Cpath d='M11.58 18.4a1.38 1.38 0 0 0-1.95 2L16 26.71a1.36 1.36 0 0 0 1 .41 1.54 1.54 0 0 0 1-.51L34 7.53a1.38 1.38 0 1 0-2.12-1.78l-15 17.94z' transform='translate(-.13)'/%3E%3Cpath d='M30 3a19.57 19.57 0 1 0 6.19 6.19 1.36 1.36 0 0 0-1.88-.44 1.38 1.38 0 0 0-.44 1.89 16.75 16.75 0 1 1-5.32-5.32A1.37 1.37 0 1 0 30 3z' transform='translate(-.13)' /%3E%3C/g%3E%3C/svg%3E")
+		background-repeat: no-repeat
+		background-size: 100%
+		background-position: center
+	&::before, &::after
+		content: ''
+		display: inline-block
+		width: 40%
+		height: 1px
+		background-color: #e8e8e8
 	&-phone
 		text-align: center
 		p
-			font-family: $opensans
 			font-weight: 600
 		span
 			font-size: 18px
-
-.ball-1
-	width: 543px
-	height: 543px
-	position: absolute
-	top: 5%	
-	left: -350px
-	opacity: .50
-	z-index: 10
-.ball-2
-	width: 233px
-	height: 233px
-	position: absolute
-	top: 14%	
-	left: 29%
-	opacity: .50
-	z-index: 10
-	filter: blur(3px)
-.ball-3
-	width: 384px
-	height: 384px
-	position: absolute
-	top: 10%	
-	right: 0
-	opacity: .50
-	z-index: 10
-	filter: blur(3px)
-
-/* блок benefit*/
-.benefit-block
+/* CONDITION END */
+/* BENEFIT */
+.s-benefit
+	padding-bottom: 80px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: url(../img/benefit/bgBenefit.jpg) center no-repeat
+		background-size: cover
+		filter: grayscale(1) blur(6px) brightness(150%) opacity(.5)
+.benefit
 	width: 100%
 	position: relative
-	margin-top: 75px
-	&-box
-		width: 100%
+	div:nth-child(1) > .benefit__box
+		padding-left: 40px
+		&:after
+			right: 0
+			background-image: url(../img/benefit/1.jpg)
+	div:nth-child(2) > .benefit__box
+		padding-left: 130px
+		&:after
+			left: 0
+			background-image: url(../img/benefit/2.jpg)
+	div:nth-child(4) > .benefit__box
+		padding-left: 40px
+		&:after
+			right: 0
+			background-image: url(../img/benefit/3.jpg)
+	div:nth-child(5) > .benefit__box
+		padding-left: 130px
+		&:after
+			left: 0
+			background-image: url(../img/benefit/4.jpg)
+	&__box
 		position: relative
 		background-color: #fdfdfd
-		border-radius: 15px
 		box-shadow: 0px 7px 14.58px 3.42px rgba(0, 0, 1, 0.13)
-		padding: 40px 44px
-		margin: 20px 0
-		font-family: $opensans
+		padding-top: 40px
 		min-height: 320px
-		color: #333
-		&__item1
-			background: #fdfdfd url(../img/benefit/boxBg.png) right -192px top -440px no-repeat
-		&__item2
-			background: #fdfdfd url(../img/benefit/boxBg.png) left -80px top -550px no-repeat
-			padding: 40px 0 44px 110px
-		&__item3
-			background: #fdfdfd url(../img/benefit/boxBg.png) right -180px top -350px no-repeat
-		&__item4
-			background: #fdfdfd url(../img/benefit/boxBg.png) left -80px top -500px no-repeat
-			padding: 40px 0 44px 110px
+		margin-bottom: 30px
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			width: 90px
+			height: 100%
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
 		img
 		 width: 80px
 		 position: relative
@@ -430,31 +431,36 @@ h1, h2, h3, h4, h5, h6
 		 margin-right: 17px
 		h4
 			font-size: 24px
-			font-weight: bold
 			margin-bottom: 35px
 		p
 			font-weight: 600
 			font-size: 17px
 			color: #7f7f7f
-		&_list
-			padding: 0
-			li
-				color: #333
-				list-style-type: none
-				line-height: 2.3
-				.fa
-					margin-right: 10px
-					color: $accent
-/* Блок realty*/
+		span
+			display: inline-block
+			width: 100%
+			font-size: 14px
+			padding-left: 20px
+			position: relative
+			margin-top: 5px
+			&:before
+				content: '\25c9'
+				position: absolute
+				color: $green
+				width: 12px
+				height: 100%
+				top: 0
+				left: 0
+/* BENEFIT END */
+/* REALTY */
 .realty-wrapper
-	font-family: $opensans
-	margin: 3% 0
+	padding-bottom: 80px
 	transition: all 0.5s ease-in-out
 .realtytop
 	&-help
 		text-transform: uppercase
 		font-weight: 400
-		margin: 0
+		margin-top: 20px
 		padding: 0
 		display: block
 		vertical-align: middle
@@ -466,7 +472,10 @@ h1, h2, h3, h4, h5, h6
 				display: inline-block
 				height: 22px
 				width: 22px
-				background: url(../img/realty/information-symbol.svg) center no-repeat
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 513.32 513.32'%3E%3Cg fill='%23b1cb54'%3E%3Cpath d='M235.272 235.272h42.777V384.99h-42.777zm0-106.942h42.777v64.165h-42.777z'/%3E%3Cpath d='M256.66 0C115.497 0 0 115.497 0 256.66s115.497 256.66 256.66 256.66 256.66-115.497 256.66-256.66S397.823 0 256.66 0zm0 470.543c-117.636 0-213.883-96.247-213.883-213.883S139.024 42.777 256.66 42.777s213.883 96.247 213.883 213.883-96.247 213.883-213.883 213.883z'/%3E%3C/g%3E%3C/svg%3E")
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 100%
 				margin-right: 10px
 				transform: translateY(20%)
 	&-nav
@@ -479,7 +488,7 @@ h1, h2, h3, h4, h5, h6
 		li
 			text-align: center
 			list-style: none
-			floa: left
+			float: left
 			display: inline-block
 			text-decoration: none
 			width: 23%
@@ -494,7 +503,6 @@ h1, h2, h3, h4, h5, h6
 				background-color: $accent
 				cursor: pointer
 			&:last-child
-
 .realtyroom
 	&-nav
 		margin: 0
@@ -527,7 +535,6 @@ h1, h2, h3, h4, h5, h6
 				span
 					display: inline-block
 					margin-left: 20px
-
 .realtyinfo
 	font-family: $opensans
 	width: 100%
@@ -591,7 +598,7 @@ h1, h2, h3, h4, h5, h6
 			font-weight: 400
 			font-size: 21px
 		&_btn
-			padding: 10px 60px
+			padding: 6px 60px
 			margin: 15px 0
 		&_cost
 			margin-bottom: 5px
@@ -610,8 +617,19 @@ h1, h2, h3, h4, h5, h6
 			padding: 0
 			color: $accent
 			font-weight: bold
-			.fa
-				margin-right: 10px
+			li
+				position: relative
+				padding-left: 20px
+				&:before
+					content: ''
+					position: absolute
+					width: 14px
+					height: 14px
+
+/* REALTY END */
+/* CALLBACK */
+.s-callback
+	padding: 60px 0 80px 0
 .callback
 	position: relative
 	z-index: 100
@@ -654,7 +672,6 @@ h1, h2, h3, h4, h5, h6
 			height: 160px
 			top: -10%
 			right: 12%
-
 .form-callback, .form-excursion
 	&-input
 		outline: none
@@ -678,7 +695,14 @@ h1, h2, h3, h4, h5, h6
 		vertical-align: middle
 	&-button
 		padding: 13px 35px
-/* блок park-carousel*/
+/* CALLBACK END */
+/* PARK */
+.s-park
+	background-color: #333
+	.h2
+		font-size: 48px
+		font-weight: 200
+		white-space: nowrap
 .park
 	width: 100%
 	height: 100%
@@ -692,7 +716,7 @@ h1, h2, h3, h4, h5, h6
 		z-index: 5
 	&-content
 		position: relative
-		margin: 60% 0
+		margin: 50% 0 20% 0
 		font-family: $opensans
 		.h3
 			font-weight: bold
@@ -715,7 +739,7 @@ h1, h2, h3, h4, h5, h6
 	&-item1, &-item2, &-item-3
 		height: 100%
 		width: 100%
-		background-position: center
+		background-position: center top
 		background-repeat: no-repeate
 		background-size: cover
 .park .owl-next, .owl-prev
@@ -733,12 +757,19 @@ h1, h2, h3, h4, h5, h6
 .park .owl-prev
 	background: url(../img/park/prev.png) no-repeat center !important
 	background-size: cover !important
-	left: 10%
+	left: 5%
+
 .owl-next.disabled, .owl-prev.disabled  
   display: none !important 
 .owl-carousel .owl-item 
-  max-height: 900px
-/* Блок excursion*/
+	height: 100%
+/* PARK END */
+/* EXCURSION */
+.s-excursion
+	position: relative
+	padding: 5% 0
+	background: url(../img/excursion/bottomBg.png) right bottom -100% no-repeat
+	background-size: 35%
 .excursion
 	span
 		display: block
@@ -769,39 +800,16 @@ h1, h2, h3, h4, h5, h6
 				background-color: #cd191e
 			&:hover
 				transform: scale(.9)
-			.fa
-				line-height: 67px
-				font-size: 28px
-				color: #fff
-	&-circle
-		z-index: -1
-		filter: blur(4px)
-		opacity: .5
-		&_left
-			width: 220px
-			height: 220px
-			bottom: 10%
-			left: 12%
-		&_right
-			width: 160px
-			height: 160px
-			top: 45%
-			left: 55%
-		&_center
-			width: 300px
-			height: 300px
-			top: 20%
-			right: -190px
+	/* EXCURSION "FORM" */
 .form-excursion, .white-popup-message
 	font-family: $opensans
-	padding: 10%
-	padding-bottom: 15%
+	padding: 40px 30px 80px 30px
 	background-color: $form
 	background: $form url(../img/excursion/formBg.png) center bottom -20px no-repeat
 	background-size: 100%
 	&-input
 		width: 100%
-		margin: 0 0 20px 0
+		margin: 0 0 15px 0
 	.h4
 		font-weight: 400
 		line-height: 1.6
@@ -813,27 +821,31 @@ h1, h2, h3, h4, h5, h6
 		color: #333
 	p
 		margin-top: 0
-		font-size: 10px
+		font-size: 12px
 	&_text
 		margin-top: 20px
 		display: inline-block
 		font-size: 12px
 	&-button
 		width: 100%
-		font-size: 18px
-  
-/* Блок footer*/
+		padding: 8px 35px
+		font-size: 16px
+	/* EXCURSION END */
+	/* FOOTER */
+.s-footer
+	background-color: $footer
+	padding: 25px 0 10px 0
 .footer
+	z-index: 0
+	&-contacts
+		padding: 5px 0 0 0
 	&-logo
 		p
 			font-size: 6px
-		width: 100%
-	&-contacts
-		padding: 0 0 0 37px
+			width: 100%
 	&-tel
-		padding: 0 0 0 60px
-		margin-top: -3px
-.footer-right-link, .copyright-link
+		margin: 0 0 auto auto
+.footer-right_link
 	font-size: 12px
 	color: rgba(#fff, .35)
 	border-bottom: 1px dashed rgba(#fff, .35)
@@ -845,8 +857,11 @@ h1, h2, h3, h4, h5, h6
 	&:hover
 		color: rgba(#fff, .55)
 		border-bottom: 1px dashed rgba(#fff, .55)
-
-/* Блок copyright*/
+	/* FOOTER END */
+	/* COPYRIGHT */
+.s-copyright
+		background-color: #2b2c33
+		padding: 15px 0
 .copyright
 	font-family: $opensans
 	font-size: 12px
@@ -854,45 +869,8 @@ h1, h2, h3, h4, h5, h6
 	height: 100%
 	&-text
 		text-transform: uppercase
-	&-link
-		text-transform: none
-		border-bottom: 1px solid rgba(#fff, .45)
-		&:hover
-			color: rgba(#fff, .55)
-			border-bottom: 1px solid rgba(#fff, .55)
-	&-sells
-		text-align: right
-	ul
-		list-style-type: none
-		display: inline-block
-		width: 180px
-		height: 45px
-		margin: 0
-		padding: 0
-		li
-			position: relative
-			width: 100%
-			height: 100%
-			span
-				display: block
-				text-align: right
-				line-height: 1.4
-				position: absolute
-				top: 0
-				right: 45px	
-			&::after
-				content: ''
-				display: block
-				position: absolute
-				width: 35px
-				height: 35px
-				background: url(../img/sells.png) center no-repeat
-				background-size: 100%
-				top: 0
-				right: 0		
-
-
-	/* Модальное окно с формой*/
+	/* COPYRIGHT END */
+	/* MODAL "FORM" */
 .white-popup 
   position: relative
   width: auto
@@ -906,13 +884,10 @@ h1, h2, h3, h4, h5, h6
   		height: 6px
   		width: 35px
   		margin: 10px 0
-  	input
-  		&:nth-child(3)
-  			margin-top: 10px
-  	button
-  		margin-bottom: 5%
-
-/* Модальное окно "спасибо" */
+		button
+			margin-bottom: 5px
+/* MODAL "FORM" END */
+/* MODAL "THANKS" */
 .overlay 
 	position: absolute
 	width: 100%
@@ -942,30 +917,31 @@ h1, h2, h3, h4, h5, h6
   		font-size: 14px
   		font-weight: 400
   		line-height: 1.4
-/* Стили для модального окна с формой*/
-.mfp-bg 
-	background: #393f4f
-.mfp-fade.mfp-bg 
-  opacity: 0
-  transition: all 0.15s ease-out
-.mfp-fade.mfp-bg.mfp-ready 
-  opacity: 0.8
-.mfp-fade.mfp-bg.mfp-removing 
+  /* MODAL "THANKS" END */
+/* ANIMATION MODAL "FORM_CALLBACK" */
+.mfp-3d-unfold .mfp-content 
+	perspective: 2000px
+.mfp-3d-unfold .mfp-with-anim
 	opacity: 0
-.mfp-fade.mfp-wrap .mfp-content 
-  opacity: 0
-  transition: all 0.15s ease-out
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
-  opacity: 1
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
-  opacity: 0
-
+	transition: all 0.3s ease-in-out
+	transform-style: preserve-3d
+	transform: rotateY(-60deg)
+.mfp-3d-unfold.mfp-bg 
+	opacity: 0
+	transition: all 0.5s
+.mfp-3d-unfold.mfp-ready .mfp-with-anim 
+	opacity: 1
+	transform: rotateY(0deg)
+.mfp-3d-unfold.mfp-ready.mfp-bg 
+	opacity: 0.8
+.mfp-3d-unfold.mfp-removing .mfp-with-anim 
+	transform: rotateY(60deg)
+	opacity: 0
+.mfp-3d-unfold.mfp-removing.mfp-bg 
+	opacity: 0
 /* Прячим блоки в секции коммерческая недвижимоть*/
 .homes-select_room, .home7-room, .home6-room, .home5-room, .home-other-room, .homes-select-16, .homes-select-15, .homes-select-19
   display: none
-
-
-
 .object, .room
 	display: none
 	background-color: $accent
@@ -979,36 +955,15 @@ h1, h2, h3, h4, h5, h6
 	outline: none
 	width: 100%
 	margin-bottom: 10px
-
 .room
 	display: none
 	background-color: $btn
 	padding: 12px 10px
 	margin-bottom: 20px
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 446px)
 	.form-callback-input
 		margin: 0
 		&:nth-child(1)
 			margin-bottom: 20px
-	
-
 
 @import "media" /* Always at the end*/

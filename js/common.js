@@ -1,7 +1,8 @@
 $(function() {
 // добавляем иконку в начало элементам li
 $('.benefit-block-box_list > li').prepend('<i class="fa fa-dot-circle-o"></i>');
-
+// Маска ввода номера телефона (плагин maskedinput)
+  $('[name="Телефон"]').mask("+7(999) 999-99-99");
 // Слайдер секции park
 $(".park").owlCarousel({
     nav:true,
@@ -47,18 +48,68 @@ $('.popup-with-form').on('click', function(event) {
   $('.white-popup-form > .h4').html('заказать звонок');
   $('.white-popup-form > button').html('заказать звонок');
 });
-$('.popup-with-form').magnificPopup({
-   type: 'inline',
-   focus: '#name',
-    removalDelay: 500,
-    mainClass: 'mfp-fade',
+// Смена заголовка и названия кнопки в попап окне
+$('.realtyinfo-price_btn').on('click', function(event) {
+  event.preventDefault();
+  $('.white-popup-form > .h4').html('записаться');
+  $('.white-popup-form > button').html('записаться');
 });
-//  Окно "спасибо"
-// $('.popup-msg').magnificPopup({
-//    type: 'inline',
-//     removalDelay: 500,
-//     mainClass: 'mfp-fade',
-// });
+
+// Закрыть попап «спасибо»
+  $('.js-close-thank-you').click(function() { // по клику на крестик
+  $('.js-overlay-thank-you').fadeOut();
+  });
+  $(document).mouseup(function (e) { // по клику вне попапа
+    var popup = $('.popup');
+    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+    $('.js-overlay-thank-you').fadeOut();
+    }
+  });
+  /* MODAL "FORM-CALLBACK" */
+$('.popup-with-form').magnificPopup({
+    type: 'inline',
+    removalDelay: 500,
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');}},
+    midClick: true});
+ /* MODAL "FORM-WRITTEN" */
+$('.realtyinfo-price_btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500,
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');}},
+    midClick: true});
+/* MODAL "VIDEO" */
+$('.js-open-video-popup').magnificPopup({
+  type: 'iframe',
+  iframe: {
+  markup: '<div class="mfp-iframe-scaler">'+
+            '<div class="mfp-close"></div>'+
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+          '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+  patterns: {
+    youtube: {
+      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+      id: 'v=', // String that splits URL in a two parts, second part should be %id%
+      // Or null - full URL will be returned
+      // Or a function that should return %id%, for example:
+      // id: function(url) { return 'parsed id'; }
+      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+    },
+    vimeo: {
+      index: 'vimeo.com/',
+      id: '/',
+      src: '//player.vimeo.com/video/%id%?autoplay=1'},
+    gmaps: {
+      index: '//maps.google.',
+      src: '%id%&output=embed'}},
+  srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+}
+});
+
+
 
 // Выбор дома
 $('ul.homes-select').on('click', 'li:not(.active)', function() {
@@ -123,32 +174,4 @@ $('.homes-select_room.js-first').css('display', 'block');
         .closest('div.realty-wrapper').find("div.js-mobile-71").hide();
         $(".js-mobile-" + $(".js-select-room-home7 option:selected").val()).show();
     });
-// Смена заголовка и названия кнопки в попап окне
-$('.realtyinfo-price_btn').on('click', function(event) {
-  event.preventDefault();
-  $('.white-popup-form > .h4').html('записаться');
-  $('.white-popup-form > button').html('записаться');
-});
-// фокус на имени при открытии попап окна с формой
-$('.realtyinfo-price_btn').magnificPopup({
-   type: 'inline',
-   focus: '#name',
-    removalDelay: 500,
-    mainClass: 'mfp-fade',
-});
-
-// Закрыть попап «спасибо»
-  $('.js-close-thank-you').click(function() { // по клику на крестик
-  $('.js-overlay-thank-you').fadeOut();
-  });
-  $(document).mouseup(function (e) { // по клику вне попапа
-    var popup = $('.popup');
-    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
-    $('.js-overlay-thank-you').fadeOut();
-    }
-  });
-// Маска ввода номера телефона (плагин maskedinput)
-$(function($){
-  $('[name="Телефон"]').mask("+7(999) 999-99-99");
-});
 });
